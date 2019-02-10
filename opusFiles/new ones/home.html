@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Welcome</title>
+	<style type="text/css">
+		body{
+			color: black;
+			font-family: 'Nunito Semibold';
+			text-align: center;
+			font-size: 40px;
+		}
+		#content{
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-auto-rows: minmax(90px, auto);
+			grid-gap: 5px;
+			max-width: 1200px;
+			margin: 5px auto;
+            position:relative;
+		}
+		#content > *{
+			background: #3bbced;
+			padding: 5px;
+		}
+		header{	
+			grid-column: span 12;
+		}
+		main{
+			grid-column: span 9;
+			grid-row: span 4;
+		}
+		nav{
+			grid-template-columns: repeat(9, 1fr);
+			grid-column: span 3;
+			grid-row: span 4;
+			grid-gap: 5px;
+		}
+		#nav img{
+			width: 15%;
+			height: 40px; /* 2.7 Media Query*/
+			float: left;
+			margin:5px;
+		}
+		#nav button{
+			display: inline-block;
+			color: #000;
+			
+		}
+		#nav button:hover{
+			background-color: rgb(13, 70, 124);
+		}
+		#nav a{
+			text-decoration: none;
+		}
+		
+		.profile 	{   grid-row: span 1; 	}
+		.cv 		{   grid-row: span 1; 	}
+		.marks 		{	grid-row: span 1;	}
+		.assignment {   grid-row: span 1;	}
+		.exam 		{	grid-row: span 1;	}
+		.attendance {	grid-row: span 1;	}
+		.ecc 		{	grid-row: span 1;	}
+		.sip 		{	grid-row: span 1;	}
+		.logout 	{   grid-row: span 1;	}
+		
+		.btn{	 
+				font-size: 26px; /* 2.2 VW unit Resizing the text size corresponding to width of viewport */
+				text-align:  left;
+
+		}
+
+		@media screen and (max-width: 820px){
+			#nav img{			
+			height: 36px ;			
+			}
+			.btn{	 
+				font-size: 22px; 
+				text-align:  left;
+			}
+		}
+		@media screen and (max-width: 720px){
+			#nav img{			
+			height: 34px;			
+			}
+			.btn{	 
+				font-size: 18px; 
+				text-align:  left;
+
+			}
+		}
+		@media screen and (max-width: 650px){
+			header{	
+			grid-column: span 12;
+			}
+			nav{
+			grid-template-columns: repeat(9, 1fr);
+			grid-column: span 3;
+			grid-row: span 4;
+			grid-gap: 5px;
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<div id="content">
+
+		<header>
+		<button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+		 Hello Shivam !
+		</header>
+		<nav id="nav">
+			<button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+			<button class="profile btn "><a href="#" ><img src="images/profile.png" /> &nbsp Profile</a></button><br>
+			<button class="cv btn"><a href="#" ><img src="images/cv.jpg" />&nbsp CV</a></button>
+			<button class="marks btn"><a href="#" ><img src="images/marksheet.png" />&nbsp Marks</a></button>
+			<button class="assignment btn"><a href="#" ><img src="images/assignment.png" />&nbsp Assignment</a></button>
+			<button class="exam btn"><a href="#" ><img src="images/exam.png" />&nbsp Exam</a></button>
+			<button class="attendance btn"><a href="#" ><img src="images/attendance.png" />&nbsp Attendance</a></button>
+			<button class="ecc btn"><a href="#" ><img src="images/ecc.png" />&nbsp ECC</a></button>
+			<button class="sip btn"><a href="#" ><img src="images/ngo.png" />&nbsp SIP</a></button>
+			<button class="logout btn"><a href="#" ><img src="images/logout.png" />&nbsp Logout</a></button>
+		</nav>
+		<main id="main">
+			
+		</main>
+	</div>
+	<script type="text/javascript">
+		function side_nav_bar_open(){
+			document.getElementById("nav").style.display = "block";
+		}
+		function side_nav_bar_close(){
+			document.getElementById("nav").style.display = "none";
+		}
+	</script>
+</body>
+</html>
